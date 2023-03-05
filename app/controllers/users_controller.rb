@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   def updateName
     user = User.find_by(email: user_params[:email])
-    user.name = name
+    user.name = user_params[:name]
     user.save
   end
 
